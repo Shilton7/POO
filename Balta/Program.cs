@@ -1,4 +1,5 @@
 ﻿using Balta.ContentContext;
+using Balta.SubscriptionContext;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,10 @@ namespace Balta
                     Console.WriteLine($"{notication.Property} - {notication.Message}");
                 }
             }
+
+            var payPalSubscription = new PayPalSubscription();
+            var student = new Student();
+            student.CreateSubscription(payPalSubscription);
 
         }
     }
